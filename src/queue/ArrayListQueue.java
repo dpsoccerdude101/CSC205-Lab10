@@ -47,7 +47,7 @@ public class ArrayListQueue<T> implements IQueue<T>
     }
 
     /**
-     * Checks if two queues contain the same 
+     * Checks if two queues contain the same
      * elements in the same order
      */
     public boolean equals(ArrayListQueue otherQueue){
