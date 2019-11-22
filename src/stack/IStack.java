@@ -1,14 +1,15 @@
 package stack;
+
 /**
- * Interface defines a generic stack
- * @author trao
+ * Write a description of interface IStack here.
  *
- * @param <T>
+ * @author (your name)
+ * @version (a version number or a date)
  */
 public interface IStack<T>
 {
-    public boolean isEmpty();
-    public void push(T item);
-    public T pop();
-    public T top();
+	public boolean isEmpty();
+	public void push(T item);
+	public T pop();
+	public T top();
 }

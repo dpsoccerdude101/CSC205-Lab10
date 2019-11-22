@@ -35,7 +35,7 @@ public class ArrayListStack<T> implements IStack<T>
      * Insert a new item at the top of the stack
      */
     public void push(T item)
-    {
+    {   
         stackBody.add(item);
     }
     //--------------------------------------------------
@@ -60,7 +60,7 @@ public class ArrayListStack<T> implements IStack<T>
     //--------------------------------------------------
     /**
      * Fetch the top-most element of the stack without
-     * removing it. Report error and return null if stack
+     * removing it. Report error and return null if stack 
      * is empty
      */
     public T top()
@@ -76,5 +76,32 @@ public class ArrayListStack<T> implements IStack<T>
             return topElement;
         }
     }
+    //----------------------------------------------------
+    /**
+     * Checks to see if two stacks have exactly the 
+     * the same elements and if those elements are
+     * in the same order 
+     */
+    public boolean equals(ArrayListStack otherStack){
+
+        if (otherStack.size() != stackBody.size()){
+            return false;
+        } else {
+            int i = 0;
+            while  (i < otherStack.size()){
+                if(this.stackBody.get(i).equals(otherStack.stackBody.get(i))){
+                    i++;
+                } else {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    //---------------------------------------------------
+    /**
+     * Returns the size of the arraylist
+     */
+    public int size(){ return stackBody.size();}
 
 }
